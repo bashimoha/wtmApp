@@ -1,0 +1,71 @@
+// import 'package:flutter/material.dart';
+// import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(MainApp());
+
+class MainApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      color: Colors.yellow,
+      home: DefaultTabController(
+        length: 4,
+        child: new Scaffold(
+          appBar: AppBar(
+              backgroundColor: Colors.tealAccent[400],
+              title: Center(
+                child: Text(
+                  'WTM',
+                  style: TextStyle(fontStyle: FontStyle.italic, fontSize: 30),
+                ),
+              )),
+          body: TabBarView(
+            children: [
+              new Container(
+                color: Colors.yellow,
+              ),
+              new Container(
+                color: Colors.orange,
+              ),
+              new Container(
+                color: Colors.lightGreen,
+              ),
+              new Container(
+                color: Colors.red,
+              ),
+            ],
+          ),
+          bottomNavigationBar: new TabBar(
+            tabs: [
+              Tab(
+                icon: new Icon(
+                  Icons.home,
+                  size: 30,
+                ),
+              ),
+              Tab(
+                icon: new Icon(
+                  Icons.explore,
+                  size: 30,
+                ),
+              ),
+              Tab(
+                icon: new Icon(
+                  Icons.add_circle_outline,
+                  size: 30,
+                ),
+              ),
+              Tab(
+                icon: new Icon(Icons.settings, size: 30),
+              )
+            ],
+            labelColor: Colors.yellow,
+            unselectedLabelColor: Colors.blue,
+          ),
+          backgroundColor: Colors.black,
+        ),
+      ),
+    );
+  }
+}
