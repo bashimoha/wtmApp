@@ -17,7 +17,7 @@ class EventApiProvider {
   }
 
   Future<List<Category>> fetchCategory() async {
-    final resp = await client.get('http://10.0.2.2:8000/api/v1/category/');
+    final resp = await client.get('http://www.wtm.social/api/v1/category/');
     if (resp.statusCode == 200) {
       List data = json.decode(resp.body);
       var res = data.map((e) => new Category.fromJson(e)).toList();

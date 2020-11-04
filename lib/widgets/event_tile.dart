@@ -3,12 +3,11 @@ import '../models/event.dart';
 import 'package:intl/intl.dart';
 
 Widget eventTile(Event event) {
-  return Container(
-      child: Column(
+  return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(15),
         child: Image(
             width: 300,
             height: 150,
@@ -25,7 +24,11 @@ Widget eventTile(Event event) {
       Text(
         event.title,
         style: TextStyle(
-            fontSize: 18, fontWeight: FontWeight.w500, letterSpacing: 0.4),
+          fontSize: 18,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 0.4,
+        ),
+        overflow: TextOverflow.fade,
       ),
       Padding(
         padding: EdgeInsets.all(2),
@@ -35,5 +38,5 @@ Widget eventTile(Event event) {
         style: TextStyle(fontSize: 18, fontWeight: FontWeight.w200),
       )
     ],
-  ));
+  );
 }

@@ -7,7 +7,7 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Event by Category')),
+        // appBar: AppBar(title: Text('Event by Category')),
         body: FutureBuilder<List<Category>>(
             future: repo.fetchCategory(),
             builder: (context, snapshot) {

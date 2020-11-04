@@ -1,5 +1,6 @@
+// import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:wtm/views/homePage.dart';
+import 'package:wtm/views/explorePage.dart';
 
 void main() => runApp(MainApp());
 
@@ -20,6 +21,7 @@ class MainApp extends StatelessWidget {
                 ),
               )),
           body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
             children: [
               new Container(
                 color: Colors.yellow,
