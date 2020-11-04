@@ -1,6 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wtm/views/homePage.dart';
 
 void main() => runApp(MainApp());
 
@@ -8,7 +7,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      color: Colors.yellow,
+      theme: ThemeData.dark(),
       home: DefaultTabController(
         length: 4,
         child: new Scaffold(
@@ -25,9 +24,7 @@ class MainApp extends StatelessWidget {
               new Container(
                 color: Colors.yellow,
               ),
-              new Container(
-                color: Colors.orange,
-              ),
+              new CategoryPage(),
               new Container(
                 color: Colors.lightGreen,
               ),
