@@ -2,4 +2,4 @@
 
 Learning Flutter
 
-Creating a simple flutter app for [this site](www.wtm.social)
+Creating a simple flutter app for [this site](http://www.wtm.social)
